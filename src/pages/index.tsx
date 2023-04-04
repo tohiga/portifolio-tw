@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Head>
         <title>Thiago | Portifólio</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/tclogo.vsg' />
       </Head>
       <main>
         <Navbar />
