@@ -46,7 +46,7 @@ export const More = () => {
     <div
       ref={ref}
       id='More'
-      className='p-5 sm:p-20 justify-center max-w-[1240px] m-auto text-center sm:text-left'
+      className='p-5 pt-20 sm:p-20 justify-center max-w-[1240px] m-auto text-center sm:text-left'
     >
       <div className='flex flex-col'>
         <span className='uppercase mt-8 text-xs sm:text-[15px] text-gray-400 '>
