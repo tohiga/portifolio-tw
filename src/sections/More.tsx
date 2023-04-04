@@ -26,6 +26,9 @@ export const More = () => {
       getSpotifyToken().then((resp) => {
         if (resp?.access_token) {
           setCookie('stoken', resp?.access_token);
+          getMySpotifyPlaylists(resp?.access_token).then((resp) => {
+            setPlaylists(resp);
+          });
         }
       });
     } else {
