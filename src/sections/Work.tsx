@@ -1,7 +1,7 @@
 import { IcAiq, IcMoodar, IcSeed, IcTm1 } from '@/assets';
-import { ExpirienceCard } from '@/components/molecules';
+import { ExperienceCard } from '@/components/molecules';
 import { useActive } from '@/stores/navSection';
-import { ExpirienceProps } from '@/types';
+import { ExperienceProps } from '@/types';
 import { useIntersection } from '@/utils/intersection';
 import React, { useEffect, useRef } from 'react';
 import Typed from 'react-typed';
@@ -16,10 +16,10 @@ export const Work = () => {
   useEffect(() => {
     if (inViewport) setActive('Work');
   }, [inViewport, setActive]);
-  const expiriences: ExpirienceProps[] = [
+  const experiences: ExperienceProps[] = [
     {
       role: 'Full-stack Developer',
-      company: 'Tm1 Brand Expirience / Oli Video',
+      company: 'Tm1 Brand Experience / Oli Video',
       responsibilities: [
         'Webapp Development/ Management/ Deploy (React / Typescript / GraphQL / AWS server)',
         'SDK Development/ Management/ Deploy (React / AWS server)',
@@ -77,12 +77,12 @@ export const Work = () => {
         what i have done so far
       </span>
       <h3 className='pl-5 sm:pl-14 text-[36px] sm:text-[42px] font-bold text-green-300 mb-3'>
-        My Expiriences
+        My Experience
       </h3>
       <VerticalTimeline>
-        {expiriences?.map((expirience) => {
+        {experiences?.map((experience) => {
           return (
-            <ExpirienceCard key={expirience?.id} expirience={expirience} />
+            <ExperienceCard key={experience?.id} experience={experience} />
           );
         })}
       </VerticalTimeline>

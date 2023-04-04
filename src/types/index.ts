@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image';
 
-export type ExpirienceProps = {
+export type ExperienceProps = {
   role: string;
   company: string;
   responsibilities: string[];

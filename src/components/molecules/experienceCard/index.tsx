@@ -1,39 +1,39 @@
 import { IcTm1 } from '@/assets';
-import { ExpirienceProps } from '@/types';
+import { ExperienceProps } from '@/types';
 import Image from 'next/image';
 import { AnchorHTMLAttributes, HTMLAttributes, ReactNode } from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 
-type ExpirienceCardProps = {
-  expirience: ExpirienceProps;
+type ExperienceCardProps = {
+  experience: ExperienceProps;
 };
 
-export const ExpirienceCard = ({ expirience }: ExpirienceCardProps) => {
+export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   return (
     <VerticalTimelineElement
-      key={expirience?.id}
+      key={experience?.id}
       contentStyle={{ background: '#242424' }}
       contentArrowStyle={{ borderRight: '7px solid #87EEAB' }}
-      date={expirience?.date}
+      date={experience?.date}
       icon={
         <div className='flex justify-center items-center w-full h-full'>
           <Image
             className='object-contain rounded-full'
-            src={expirience?.logo}
+            src={experience?.logo}
             alt='image logo'
           />
         </div>
       }
       iconStyle={{ background: 'white' }}
     >
-      <h3 className='text-white text-xl font-bold'>{expirience?.role}</h3>
+      <h3 className='text-white text-xl font-bold'>{experience?.role}</h3>
       <h5 className='text-green-300 text-sm font-bold'>
-        {expirience?.company}
+        {experience?.company}
       </h5>
       <ul className='mt-5 list-disc ml-5 space-y-2'>
-        {expirience?.responsibilities.map((responsability, index) => (
+        {experience?.responsibilities.map((responsability, index) => (
           <li
-            key={`expirience-${index}`}
+            key={`experience-${index}`}
             className='text-white-100 text-[14px] pl-1 tracking-wider'
           >
             {responsability}

@@ -1,1 +1,1 @@
-export * from './expirienceCard';
+export * from './experienceCard';

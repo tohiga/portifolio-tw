@@ -1,6 +1,6 @@
 import { IcTm1 } from '@/assets';
 import { Card } from '@/components/atoms';
-import { ExpirienceProps, Tecnology } from '@/types';
+import { ExperienceProps, Tecnology } from '@/types';
 import Image from 'next/image';
 import { AnchorHTMLAttributes, HTMLAttributes, ReactNode } from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';

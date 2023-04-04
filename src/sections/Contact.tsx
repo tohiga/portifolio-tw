@@ -32,9 +32,11 @@ export const Contact = () => {
       'BLhCX06rL_P7MTBJG'
     );
     if (resp?.status === 200) {
-      alert('Email enviado! Retornarei o mais rápido possível :) Obrigado');
+      alert(
+        'Email sent! I`ll get back to you as soon as possible :) Thank you.'
+      );
     } else {
-      alert('Algo deu errado :/ Poderia tentar de novo?');
+      alert('Something went wrong :/ Could you try again?');
     }
     setIsSendingEmail(false);
     clearStates();
