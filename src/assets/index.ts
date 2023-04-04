@@ -1,0 +1,12 @@
+export { default as IcAiq } from './aiqfome.png';
+export { default as IcAws } from './aws.svg';
+export { default as IcGraphql } from './graphql.svg';
+export { default as IcJest } from './jest.svg';
+export { default as IcMoodar } from './moodar.png';
+export { default as IcNext } from './next.svg';
+export { default as IcNode } from './nodejs.svg';
+export { default as IcReact } from './react.svg';
+export { default as IcSeed } from './seedabit.png';
+export { default as IcTailwind } from './tailwind.svg';
+export { default as IcTm1 } from './tm1.jpeg';
+export { default as IcTs } from './ts.svg';
