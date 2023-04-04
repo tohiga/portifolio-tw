@@ -65,7 +65,9 @@ export const Contact = () => {
         }`}
       >
         <div
-          className='rounded-lg p-5 sm:w-[450px] w-[300px] mt-5 flex flex-col gap-4 bg-slate-600'
+          className='z-10hover:shadow-green-500 top border border-solid border-green-300 
+          transition-transform rounded-lg p-5 sm:w-[450px] w-[300px] mt-5 flex 
+          flex-col gap-4'
           style={{
             transform: inViewport ? 'translate-x-0' : 'translate-x-full',
           }}

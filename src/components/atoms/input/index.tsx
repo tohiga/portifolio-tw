@@ -17,14 +17,14 @@ export const Input = ({
 }: InputProps) => {
   return (
     <label className='flex flex-col'>
-      <span className='text-white font-medium mb-2'>{label}</span>
+      <span className='text-slate-200 font-medium mb-2'>{label}</span>
       {type === 'textarea' ? (
         <textarea
           rows={6}
           name={name}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className='bg-green-300 py-2 sm:py-4 px-6 rounded-lg outline-none border-none'
+          className='bg-slate-100 text-black py-2 sm:py-4 px-6 rounded-lg outline-none border-none'
           placeholder={placeholder || ''}
         />
       ) : (
@@ -33,7 +33,7 @@ export const Input = ({
           name={name}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className='bg-green-300 py-2 sm:py-4 px-6 rounded-lg outline-none border-none'
+          className='bg-slate-100 text-black py-2 sm:py-4 px-6 rounded-lg outline-none border-none'
           placeholder={placeholder || ''}
         />
       )}
