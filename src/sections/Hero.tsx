@@ -33,7 +33,7 @@ export const Hero = () => {
           </p>
           <Typed
             className='text-1xl font-bold pl-2 text-gray-600 md:text-4xl pt-1 uppercase sm:text-3xl'
-            strings={['React', 'Tailwind', 'Typescript']}
+            strings={['React', 'Tailwind', 'Typescript', 'Zustand']}
             typeSpeed={140}
             backSpeed={140}
             loop

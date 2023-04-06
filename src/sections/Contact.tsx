@@ -96,7 +96,7 @@ export const Contact = () => {
           <button
             disabled={!name || !email || !message || isSendingEmail}
             onClick={handleSubmit}
-            className='w-full rounded-full bg-green-300 disabled:bg-gray-400 transition-all ease-linear py-3 px-8 mt-6 outline-none text-white font-bold shadow-md'
+            className='w-full rounded-full bg-green-300 hover:bg-green-400 disabled:bg-gray-400 transition-all ease-linear py-3 px-8 mt-6 outline-none text-black font-bold shadow-md'
           >
             {isSendingEmail ? 'Enviando...' : 'Enviar'}
           </button>
