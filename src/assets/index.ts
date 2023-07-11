@@ -9,4 +9,6 @@ export { default as IcReact } from './react.svg';
 export { default as IcSeed } from './seedabit.png';
 export { default as IcTailwind } from './tailwind.svg';
 export { default as IcTm1 } from './tm1.jpeg';
+export { default as IcTranslatePng } from './translate.png';
+export { default as IcTranslate } from './translate.svg';
 export { default as IcTs } from './ts.svg';

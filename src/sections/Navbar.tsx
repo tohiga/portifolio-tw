@@ -1,5 +1,9 @@
+import { IcTranslate, IcTranslatePng } from '@/assets';
+import i18n from '@/i18n';
 import { useActive } from '@/stores/navSection';
+import Image from 'next/image';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 type NavLink = {
@@ -8,19 +12,36 @@ type NavLink = {
 };
 
 export const Navbar = () => {
+  const { t } = useTranslation();
   const [showNavIcon, setShowNavIcon] = useState<boolean>(true);
   const { active, setActive } = useActive();
+
+  const invertLanguage: {
+    [key: string]: string;
+  } = {
+    'pt-BR': 'en-US',
+    'en-US': 'pt-BR',
+  };
+
+  const changeLanguage = () => {
+    i18n
+      .changeLanguage(invertLanguage[i18n.language])
+      .then((res) => console.log(res))
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const handleClick = () => {
     setShowNavIcon(!showNavIcon);
   };
 
   const navLinks: NavLink[] = [
-    { title: 'Home', id: 0 },
-    { title: 'Work', id: 1 },
-    { title: 'Stack', id: 2 },
-    { title: 'More', id: 3 },
-    { title: 'Contact', id: 4 },
+    { title: t('Home'), id: 0 },
+    { title: t('Work'), id: 1 },
+    { title: t('Stack'), id: 2 },
+    { title: t('More'), id: 3 },
+    { title: t('Contact'), id: 4 },
   ];
 
   const pushToSection = (section: string) => {
@@ -31,9 +52,20 @@ export const Navbar = () => {
   };
   return (
     <div className='bg-black fixed top-0 z-20 inset-x-0 flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4'>
-      <h1 className='w-full z-20 text-3xl font-bold text-green-300 uppercase'>
-        thiago.
-      </h1>
+      <div className='flex gap-5'>
+        <h1 className='w-full z-20 text-3xl font-bold text-green-300 uppercase'>
+          thiago.
+        </h1>
+        <Image
+          onClick={changeLanguage}
+          className='top-0 z-20 cursor-pointer'
+          src={IcTranslate}
+          alt='traduzir'
+          width={32}
+          height={35}
+        />
+      </div>
+
       <ul
         className={`fixed pt-20 ease-in-out duration-400 left-0 top-0 
         w-[60%] h-full border-r border-r-gray-900 bg-black 

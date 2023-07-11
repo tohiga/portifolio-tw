@@ -1,10 +1,12 @@
 import { useActive } from '@/stores/navSection';
 import { useIntersection } from '@/utils/intersection';
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import Typed from 'react-typed';
 
 export const Hero = () => {
   const ref = useRef<HTMLDivElement | null>(null);
+  const { t } = useTranslation();
   const { setActive } = useActive();
   const inViewport = useIntersection(ref, '-100px');
   const pushToSection = () => {
@@ -20,7 +22,7 @@ export const Hero = () => {
   return (
     <div ref={ref} id='Home' className='text-white'>
       <div className='max-w-[800px] h-[100vh]  mx-auto flex flex-col items-center justify-center'>
-        <p className=' uppercase font-bold'>really nice project made by a</p>
+        <p className=' uppercase font-bold'>{t('HeroTitle')}</p>
         <h1 className='md:text-7xl py-2 uppercase sm:text-6xl text-4xl font-bold'>
           WEB{' '}
           <span className='bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text md:text-7xl py-2 uppercase sm:text-6xl text-4xl font-bold animate-gradient'>
@@ -29,7 +31,7 @@ export const Hero = () => {
         </h1>
         <div className='flex justify-center items-center'>
           <p className='md:text-4xl pt-1 sm:text-3xl text-1xl font-bold'>
-            Using Awesome Tools.
+            {t('HeroSubtitle')}
           </p>
           <Typed
             className='text-1xl font-bold pl-2 text-gray-600 md:text-4xl pt-1 uppercase sm:text-3xl'
