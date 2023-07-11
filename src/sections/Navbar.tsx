@@ -24,12 +24,7 @@ export const Navbar = () => {
   };
 
   const changeLanguage = () => {
-    i18n
-      .changeLanguage(invertLanguage[i18n.language])
-      .then((res) => console.log(res))
-      .catch((err) => {
-        console.log(err);
-      });
+    i18n.changeLanguage(invertLanguage[i18n.language]);
   };
 
   const handleClick = () => {
