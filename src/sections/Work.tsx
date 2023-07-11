@@ -4,18 +4,19 @@ import { useActive } from '@/stores/navSection';
 import { ExperienceProps } from '@/types';
 import { useIntersection } from '@/utils/intersection';
 import React, { useEffect, useRef } from 'react';
-import Typed from 'react-typed';
+import { useTranslation } from 'react-i18next';
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
 export const Work = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   const { setActive } = useActive();
+  const { t } = useTranslation();
   const inViewport = useIntersection(ref, '-100px');
 
   useEffect(() => {
-    if (inViewport) setActive('Work');
-  }, [inViewport, setActive]);
+    if (inViewport) setActive(t('Work'));
+  }, [inViewport, setActive, t]);
   const experiences: ExperienceProps[] = [
     {
       role: 'Full-stack Developer',
@@ -70,7 +71,7 @@ export const Work = () => {
   return (
     <div
       ref={ref}
-      id='Work'
+      id={t('Work')}
       className='max-w-[1240px] mx-auto flex flex-col p-5 pt-28 text-center sm:text-left'
     >
       <span className='pl-5 sm:pl-14 uppercase text-xs sm:text-[15px] text-gray-400'>

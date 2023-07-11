@@ -12,15 +12,17 @@ import { StackCard } from '@/components/molecules/stackCard';
 import { useActive } from '@/stores/navSection';
 import { useIntersection } from '@/utils/intersection';
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const Stack = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   const inViewport = useIntersection(ref, '-100px');
+  const { t } = useTranslation();
   const { setActive } = useActive();
 
   useEffect(() => {
-    if (inViewport) setActive('Stack');
-  }, [inViewport, setActive]);
+    if (inViewport) setActive(t('Stack'));
+  }, [inViewport, setActive, t]);
 
   const stack = [
     {
@@ -59,7 +61,7 @@ export const Stack = () => {
   return (
     <div
       ref={ref}
-      id='Stack'
+      id={t('Stack')}
       className='p-5 pt-20 sm:p-20 justify-center max-w-[1240px] m-auto text-center sm:text-left'
     >
       <div className='flex flex-col'>

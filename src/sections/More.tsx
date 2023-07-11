@@ -9,16 +9,18 @@ import { getCookie, setCookie } from '@/utils/cookies';
 import { useIntersection } from '@/utils/intersection';
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const More = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   const inViewport = useIntersection(ref, '-100px');
+  const { t } = useTranslation();
   const [playlists, setPlaylists] = useState<PlaylistItem[]>([]);
   const { setActive } = useActive();
 
   useEffect(() => {
-    if (inViewport) setActive('More');
-  }, [inViewport, setActive]);
+    if (inViewport) setActive(t('More'));
+  }, [inViewport, setActive, t]);
 
   useEffect(() => {
     const token = getCookie('stoken');
@@ -45,7 +47,7 @@ export const More = () => {
   return (
     <div
       ref={ref}
-      id='More'
+      id={t('More')}
       className='p-5 pt-20 sm:p-20 justify-center max-w-[1240px] m-auto text-center sm:text-left'
     >
       <div className='flex flex-col'>

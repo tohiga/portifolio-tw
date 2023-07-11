@@ -9,7 +9,8 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { z, ZodError } from 'zod';
+import { useTranslation } from 'react-i18next';
+import { ZodError, z } from 'zod';
 
 const EJS_SERVICE = process.env.NEXT_PUBLIC_SERVICE_EJS!;
 const EJS_TEMPLATE = process.env.NEXT_PUBLIC_TEMPLATE_EJS!;
@@ -32,6 +33,7 @@ type FormData = z.infer<typeof schema>;
 
 export const Contact = () => {
   const ref = useRef<HTMLDivElement | null>(null);
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -43,8 +45,8 @@ export const Contact = () => {
   const { setActive } = useActive();
 
   useEffect(() => {
-    if (inViewport) setActive('Contact');
-  }, [inViewport, setActive]);
+    if (inViewport) setActive(t('Contact'));
+  }, [inViewport, setActive, t]);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -106,7 +108,7 @@ export const Contact = () => {
   return (
     <div
       ref={ref}
-      id='Contact'
+      id={t('Contact')}
       className='p-10 sm:p-20 justify-center max-w-[1240px] m-auto text-center sm:text-left'
     >
       <div className='flex flex-col'>

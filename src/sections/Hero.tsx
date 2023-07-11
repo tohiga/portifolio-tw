@@ -10,17 +10,17 @@ export const Hero = () => {
   const { setActive } = useActive();
   const inViewport = useIntersection(ref, '-100px');
   const pushToSection = () => {
-    setActive('Work');
-    let element = document.getElementById('Work');
+    setActive(t('Work'));
+    let element = document.getElementById(t('Work'));
     element && element.scrollIntoView({ behavior: 'smooth' });
   };
 
   useEffect(() => {
-    if (inViewport) setActive('Home');
-  }, [inViewport, setActive]);
+    if (inViewport) setActive(t('Home'));
+  }, [inViewport, setActive, t]);
 
   return (
-    <div ref={ref} id='Home' className='text-white'>
+    <div ref={ref} id={t('Home')} className='text-white'>
       <div className='max-w-[800px] h-[100vh]  mx-auto flex flex-col items-center justify-center'>
         <p className=' uppercase font-bold'>{t('HeroTitle')}</p>
         <h1 className='md:text-7xl py-2 uppercase sm:text-6xl text-4xl font-bold'>
