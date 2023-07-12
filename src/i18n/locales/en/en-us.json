@@ -5,7 +5,12 @@
     "Stack": "Stack",
     "More": "More",
     "Contact": "Contact",
+    "Send": "Send",
+    "Sending": "Sending...",
     "HeroTitle": "really nice project made by a",
-    "HeroSubtitle": "Using Awesome Tools."
+    "HeroSubtitle": "Using Awesome Tools.",
+    "GetStarted": "Get Started",
+    "WhatIveDone": "What I Have Done So Far",
+    "MyExperience": "My Experience"
   }
 }

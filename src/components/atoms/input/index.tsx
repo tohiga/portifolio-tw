@@ -23,7 +23,7 @@ export const Input = ({
 }: InputProps) => {
   return (
     <label className='flex flex-col'>
-      <span className='text-slate-200 font-medium mb-1'>{label}</span>
+      <span className=' font-medium mb-1'>{label}</span>
       {type === 'textarea' ? (
         <textarea
           rows={5}
@@ -32,7 +32,7 @@ export const Input = ({
           value={value}
           onChange={onChange}
           className={
-            'bg-gray-900 text-slate-200 py-2 sm:py-4 px-6 rounded-lg outline-none border-none'
+            'border dark:bg-gray-900  py-2 sm:py-4 px-6 rounded-lg outline-none dark:border-none'
           }
           placeholder={placeholder || ''}
         />
@@ -44,7 +44,7 @@ export const Input = ({
           value={value}
           onChange={onChange}
           className={
-            'bg-gray-900 text-slate-200 py-2 sm:py-4 px-6 rounded-lg outline-none border-none'
+            'dark:bg-gray-900 border  py-2 sm:py-4 px-6 rounded-lg outline-none dark:border-none'
           }
           placeholder={placeholder || ''}
           autoComplete='off'

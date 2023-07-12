@@ -10,7 +10,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 export const Work = () => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const { setActive } = useActive();
+  const { setActive, darkMode } = useActive();
   const { t } = useTranslation();
   const inViewport = useIntersection(ref, '-100px');
 
@@ -25,7 +25,7 @@ export const Work = () => {
         'Webapp Development/ Management/ Deploy (React / Typescript / GraphQL / AWS server)',
         'SDK Development/ Management/ Deploy (React / AWS server)',
       ],
-      date: 'Nov 2021 - Present',
+      date: 'Nov 2021 - May 2023',
       id: 0,
       logo: IcTm1,
     },
@@ -74,13 +74,13 @@ export const Work = () => {
       id={t('Work')}
       className='max-w-[1240px] mx-auto flex flex-col p-5 pt-28 text-center sm:text-left'
     >
-      <span className='pl-5 sm:pl-14 uppercase text-xs sm:text-[15px] text-gray-400'>
-        what i have done so far
+      <span className='pl-5 sm:pl-14 uppercase text-xs sm:text-[15px] '>
+        {t('WhatIveDone')}
       </span>
-      <h3 className='pl-5 sm:pl-14 text-[36px] sm:text-[42px] font-bold text-green-300 mb-3'>
-        My Experience
+      <h3 className='pl-5 sm:pl-14 text-[36px] sm:text-[42px] font-bold text-green-400 mb-3'>
+        {t('MyExperience')}
       </h3>
-      <VerticalTimeline>
+      <VerticalTimeline lineColor='#e0e0e0'>
         {experiences?.map((experience) => {
           return (
             <ExperienceCard key={experience?.id} experience={experience} />

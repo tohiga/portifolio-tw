@@ -3,6 +3,7 @@ import {
   IcGraphql,
   IcJest,
   IcNext,
+  IcNextDark,
   IcNode,
   IcReact,
   IcTailwind,
@@ -18,7 +19,7 @@ export const Stack = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   const inViewport = useIntersection(ref, '-100px');
   const { t } = useTranslation();
-  const { setActive } = useActive();
+  const { setActive, darkMode } = useActive();
 
   useEffect(() => {
     if (inViewport) setActive(t('Stack'));
@@ -35,7 +36,7 @@ export const Stack = () => {
     },
     {
       name: 'Next js',
-      icon: IcNext,
+      icon: darkMode ? IcNext : IcNextDark,
     },
     {
       name: 'Typescript',
@@ -65,10 +66,10 @@ export const Stack = () => {
       className='p-5 pt-20 sm:p-20 justify-center max-w-[1240px] m-auto text-center sm:text-left'
     >
       <div className='flex flex-col'>
-        <span className='uppercase mt-8 text-xs sm:text-[15px] text-gray-400 '>
+        <span className='uppercase mt-8 text-xs sm:text-[15px] '>
           Some technologies I have experience with
         </span>
-        <h3 className='text-[36px] sm:text-[42px] font-bold text-green-300'>
+        <h3 className='text-[36px] sm:text-[42px] font-bold text-green-400'>
           My Stack
         </h3>
       </div>

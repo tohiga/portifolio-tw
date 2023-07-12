@@ -112,10 +112,10 @@ export const Contact = () => {
       className='p-10 sm:p-20 justify-center max-w-[1240px] m-auto text-center sm:text-left'
     >
       <div className='flex flex-col'>
-        <span className='uppercase mt-8 text-xs sm:text-[15px] text-gray-400 '>
+        <span className='uppercase mt-8 text-xs sm:text-[15px]  '>
           Get in Touch
         </span>
-        <h3 className='text-[36px] sm:text-[42px] font-bold text-green-300'>
+        <h3 className='text-[36px] sm:text-[42px] font-bold text-green-400'>
           Contact me.
         </h3>
       </div>
@@ -126,7 +126,7 @@ export const Contact = () => {
       >
         <form
           onSubmit={handleSubmit}
-          className='z-10hover:shadow-green-500 top border border-solid border-green-300 
+          className='z-10hover:shadow-green-500 top border border-solid border-green-400 
           transition-transform rounded-lg p-5 sm:w-[450px] w-[300px] mt-5 flex 
           flex-col gap-4'
           style={{
@@ -158,9 +158,9 @@ export const Contact = () => {
           <button
             type='submit'
             disabled={isSendingEmail}
-            className='w-full rounded-full bg-green-300 hover:bg-green-400 disabled:bg-gray-400 transition-all ease-linear py-3 px-8 mt-6 outline-none text-black font-bold shadow-md'
+            className='w-full rounded-full bg-green-400 hover:bg-green-500 disabled:bg-gray-400 transition-all ease-linear py-3 px-8 mt-6 outline-none text-slate-50 dark:text-zinc-900 font-bold shadow-md'
           >
-            {isSendingEmail ? 'Enviando...' : 'Enviar'}
+            {isSendingEmail ? t('Sending') : t('Send')}
           </button>
         </form>
       </div>

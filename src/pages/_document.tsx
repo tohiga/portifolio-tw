@@ -9,7 +9,7 @@ export default function Document(this: any) {
       <Head>
         <link rel='icon' href='/tclogo.svg' type='image/svg+xml' />
       </Head>
-      <body>
+      <body className='dark'>
         <Main />
         <NextScript />
       </body>
