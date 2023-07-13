@@ -22,7 +22,7 @@ export const Work = () => {
       role: 'Full-stack Developer',
       company: 'Tm1 Brand Experience / Oli Video',
       responsibilities: [
-        'Webapp Development/ Management/ Deploy (React / Typescript / GraphQL / AWS server)',
+        'Webapp Development/ Management/ Deploy (React / Next / Typescript / GraphQL / AWS server)',
         'SDK Development/ Management/ Deploy (React / AWS server)',
       ],
       date: 'Nov 2021 - May 2023',

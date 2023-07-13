@@ -113,10 +113,10 @@ export const Contact = () => {
     >
       <div className='flex flex-col'>
         <span className='uppercase mt-8 text-xs sm:text-[15px]  '>
-          Get in Touch
+          {t('GetInTouch')}
         </span>
         <h3 className='text-[36px] sm:text-[42px] font-bold text-green-400'>
-          Contact me.
+          {t('ContactMe')}
         </h3>
       </div>
       <div

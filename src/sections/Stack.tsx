@@ -67,10 +67,10 @@ export const Stack = () => {
     >
       <div className='flex flex-col'>
         <span className='uppercase mt-8 text-xs sm:text-[15px] '>
-          Some technologies I have experience with
+          {t('SomeTechnologies')}
         </span>
         <h3 className='text-[36px] sm:text-[42px] font-bold text-green-400'>
-          My Stack
+          {t('MyStack')}
         </h3>
       </div>
       <div className='flex mt-10 flex-wrap gap-5 sm:gap-10 justify-center'>
