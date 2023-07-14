@@ -9,6 +9,7 @@ import {
   IcTailwind,
   IcTs,
 } from '@/assets';
+import { SectionDescription } from '@/components/molecules';
 import { StackCard } from '@/components/molecules/stackCard';
 import { useActive } from '@/stores/navSection';
 import { useIntersection } from '@/utils/intersection';
@@ -66,12 +67,10 @@ export const Stack = () => {
       className='p-5 pt-20 sm:p-20 justify-center max-w-[1240px] m-auto text-center sm:text-left'
     >
       <div className='flex flex-col'>
-        <span className='uppercase mt-8 text-xs sm:text-[15px] '>
-          {t('SomeTechnologies')}
-        </span>
-        <h3 className='text-[36px] sm:text-[42px] font-bold text-green-400'>
-          {t('MyStack')}
-        </h3>
+        <SectionDescription
+          title={t('MyStack')}
+          subtitle={t('SomeTechnologies')}
+        />
       </div>
       <div className='flex mt-10 flex-wrap gap-5 sm:gap-10 justify-center'>
         {stack.map((tecnology, index) => (

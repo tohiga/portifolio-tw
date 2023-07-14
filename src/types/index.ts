@@ -53,3 +53,8 @@ export type PlaylistItem = {
   type: string;
   uri: string;
 };
+
+export type SectionDescriptionProps = {
+  title: string;
+  subtitle: string;
+};

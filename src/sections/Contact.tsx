@@ -1,4 +1,5 @@
 import { Input } from '@/components/atoms';
+import { SectionDescription } from '@/components/molecules';
 import { useActive } from '@/stores/navSection';
 import { useIntersection } from '@/utils/intersection';
 import emailjs from '@emailjs/browser';
@@ -109,15 +110,10 @@ export const Contact = () => {
     <div
       ref={ref}
       id={t('Contact')}
-      className='p-10 sm:p-20 justify-center max-w-[1240px] m-auto text-center sm:text-left'
+      className='p-5 pt-18 sm:p-20 justify-center max-w-[1240px] m-auto text-center sm:text-left'
     >
       <div className='flex flex-col'>
-        <span className='uppercase mt-8 text-xs sm:text-[15px]  '>
-          {t('GetInTouch')}
-        </span>
-        <h3 className='text-[36px] sm:text-[42px] font-bold text-green-400'>
-          {t('ContactMe')}
-        </h3>
+        <SectionDescription title={t('ContactMe')} subtitle={t('GetInTouch')} />
       </div>
       <div
         className={`flex justify-center pt-0  ${
@@ -127,7 +123,7 @@ export const Contact = () => {
         <form
           onSubmit={handleSubmit}
           className='z-10hover:shadow-green-500 top border border-solid border-green-400 
-          transition-transform rounded-lg p-5 sm:w-[450px] w-[300px] mt-5 flex 
+          transition-transform rounded-lg p-5 sm:w-[450px] w-[300px] mt-6 flex 
           flex-col gap-4'
           style={{
             transform: inViewport ? 'translate-x-0' : 'translate-x-full',

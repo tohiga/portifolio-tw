@@ -1,4 +1,5 @@
 import { Card } from '@/components/atoms';
+import { SectionDescription } from '@/components/molecules';
 import {
   getMySpotifyPlaylists,
   getSpotifyToken,
@@ -50,14 +51,11 @@ export const More = () => {
       id={t('More')}
       className='p-5 pt-20 sm:p-20 justify-center max-w-[1240px] m-auto text-center sm:text-left'
     >
-      <div className='flex flex-col'>
-        <span className='uppercase mt-8 text-xs sm:text-[15px]  '>
-          {t('ILikeToListen')}
-        </span>
-        <h3 className='text-[36px] sm:text-[42px] font-bold text-green-400'>
-          {t('MyPlaylists')}
-        </h3>
-      </div>
+      <SectionDescription
+        title={t('MyPlaylists')}
+        subtitle={t('ILikeToListen')}
+      />
+
       <div className={`flex mt-10 flex-wrap gap-5 sm:gap-10 justify-center`}>
         {playlists?.map((playlist, index) => (
           <div

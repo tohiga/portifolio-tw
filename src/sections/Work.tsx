@@ -1,5 +1,5 @@
 import { IcAiq, IcMoodar, IcSeed, IcTm1 } from '@/assets';
-import { ExperienceCard } from '@/components/molecules';
+import { ExperienceCard, SectionDescription } from '@/components/molecules';
 import { useActive } from '@/stores/navSection';
 import { ExperienceProps } from '@/types';
 import { useIntersection } from '@/utils/intersection';
@@ -72,14 +72,14 @@ export const Work = () => {
     <div
       ref={ref}
       id={t('Work')}
-      className='max-w-[1240px] mx-auto flex flex-col p-5 pt-28 text-center sm:text-left'
+      className='max-w-[1240px] mx-auto flex flex-col p-5 pt-20 text-center sm:text-left'
     >
-      <span className='pl-5 sm:pl-14 uppercase text-xs sm:text-[15px] '>
-        {t('WhatIveDone')}
-      </span>
-      <h3 className='pl-5 sm:pl-14 text-[36px] sm:text-[42px] font-bold text-green-400 mb-3'>
-        {t('MyExperience')}
-      </h3>
+      <div className=' mb-4 md:mb-2 sm:ml-14 flex flex-col'>
+        <SectionDescription
+          title={t('MyExperience')}
+          subtitle={t('WhatIveDone')}
+        />
+      </div>
       <VerticalTimeline lineColor='#e0e0e0'>
         {experiences?.map((experience) => {
           return (
