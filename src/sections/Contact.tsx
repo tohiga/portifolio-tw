@@ -17,24 +17,20 @@ const EJS_SERVICE = process.env.NEXT_PUBLIC_SERVICE_EJS!;
 const EJS_TEMPLATE = process.env.NEXT_PUBLIC_TEMPLATE_EJS!;
 const EJS_KEY = process.env.NEXT_PUBLIC_KEY_EJS!;
 
-const schema = z.object({
-  name: z
-    .string()
-    .min(2, 'Name must contain at least 2 characters')
-    .max(50, 'Name must contain at most 50 characters'),
-  email: z.string().email(),
-  message: z.string().min(5, 'Message must contain at least 5 characters'),
-});
-
 type FieldErrors<T> = {
   [K in keyof T]?: string;
 };
 
-type FormData = z.infer<typeof schema>;
-
 export const Contact = () => {
-  const ref = useRef<HTMLDivElement | null>(null);
+  type FormData = z.infer<typeof schema>;
   const { t } = useTranslation();
+  const schema = z.object({
+    name: z.string().min(2, t('MinNameError')).max(50, t('MaxNameError')),
+    email: z.string().email(t('EmailError')),
+    message: z.string().min(5, t('MessageError')),
+  });
+
+  const ref = useRef<HTMLDivElement | null>(null);
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -130,14 +126,14 @@ export const Contact = () => {
           }}
         >
           <Input
-            label='Your name'
+            label={t('YourName')}
             name={'name'}
             value={formData.name}
             onChange={handleChange}
             error={formErrors?.name || ''}
           />
           <Input
-            label='Your email'
+            label={t('YourEmail')}
             name={'email'}
             value={formData.email}
             onChange={handleChange}
@@ -145,7 +141,7 @@ export const Contact = () => {
           />
           <Input
             type='textarea'
-            label='Message'
+            label={t('Message')}
             name={'message'}
             value={formData.message}
             onChange={handleChange}

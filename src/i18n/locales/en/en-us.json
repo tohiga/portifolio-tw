@@ -17,6 +17,13 @@
     "ILikeToListen": "Things I like to listen to while coding",
     "MyPlaylists": "My Playlists",
     "ContactMe": "Contact Me",
-    "GetInTouch": "Get In Touch"
+    "GetInTouch": "Get In Touch",
+    "YourName": "Your Name",
+    "YourEmail": "Your Email",
+    "Message": "Message",
+    "MaxNameError": "Name must contain at most 50 characters",
+    "MinNameError": "Name must contain at least 2 characters",
+    "MessageError": "Message must contain at least 5 characters",
+    "EmailError": "Invalid E-Mail"
   }
 }

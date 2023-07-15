@@ -17,6 +17,13 @@
     "ILikeToListen": "Coisas Que Gosto de Ouvir Enquanto Codo",
     "MyPlaylists": "Minhas Playlists",
     "ContactMe": "Fale Comigo",
-    "GetInTouch": "Entre Em Contato"
+    "GetInTouch": "Entre Em Contato",
+    "YourName": "Seu Nome",
+    "YourEmail": "Seu Email",
+    "Message": "Mensagem",
+    "MaxNameError": "Nome deve conter no máximo 50 caracteres",
+    "MinNameError": "Nome deve conter no mínimo 2 caracteres",
+    "MessageError": "Mensagem deve conter pelo menos 5 caracteres",
+    "EmailError": "Email Inválido"
   }
 }
