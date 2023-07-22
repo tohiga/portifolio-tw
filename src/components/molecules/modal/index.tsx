@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, useEffect } from 'react';
 
 type ModalProps = {
   isVisible: boolean;
@@ -7,20 +7,26 @@ type ModalProps = {
 };
 
 export const Modal = ({ isVisible, onClose, children }: ModalProps) => {
-  if (!isVisible) return null;
   const handleClose = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const target = e.target as HTMLDivElement;
     if (target.id === 'wrapper') {
       onClose();
     }
   };
+
   return (
     <div
-      onClick={(e) => handleClose(e)}
+      onClick={handleClose}
       id='wrapper'
-      className='fixed z-50 inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center'
+      className={`fixed z-50 inset-0 backdrop-blur-sm flex justify-center items-center transition-opacity ${
+        isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      }`}
     >
-      <div className='w-[500px] min-h-[200px] p-3 rounded-md bg-slate-200 dark:bg-zinc-600 flex flex-col'>
+      <div
+        className={`w-[400px] min-h-[420px] p-3 transition-opacity duration-300 rounded-[15px] bg-gray-200 dark:bg-zinc-800 flex flex-col ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
         {children}
       </div>
     </div>

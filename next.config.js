@@ -5,6 +5,11 @@ const nextConfig = {
 
 module.exports = {
   images: {
-    domains: ['mosaic.scdn.co', 'seed-mix-image.spotifycdn.com', 'i.scdn.co'],
+    domains: [
+      'mosaic.scdn.co',
+      'seed-mix-image.spotifycdn.com',
+      'i.scdn.co',
+      'images-ak.spotifycdn.com',
+    ],
   },
 };

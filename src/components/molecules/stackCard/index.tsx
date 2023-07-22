@@ -25,7 +25,7 @@ export const StackCard = ({ tecnology }: StackCardProps) => {
         <span className='pb-2 font-bold'>{tecnology.name}</span>
       </Card>
       <Modal isVisible={isVisible} onClose={() => setIsVisible(false)}>
-        <div className='flex justify-center'>
+        <div className='flex justify-center '>
           <span className='text-zinc-600 dark:text-slate-50'>
             {tecnology.name}
           </span>

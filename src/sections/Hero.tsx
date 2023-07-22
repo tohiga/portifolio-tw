@@ -43,9 +43,9 @@ export const Hero = () => {
         </div>
         <button
           onClick={pushToSection}
-          className='bg-green-400 rounded-md w-[170px] sm:w-[220px] my-5 p-3 hover:bg-green-500 transition-all ease-linear'
+          className='bg-green-400 shadow-xl shadow-zinc-400 dark:shadow-3xl dark:shadow-green-500/50 rounded-md w-[170px] sm:w-[220px] my-5 p-3 hover:bg-green-500 transition-all ease-linear'
         >
-          <span className='font-bold sm:text-lg text-slate-50 dark:text-zinc-900 text-sm'>
+          <span className='font-bold sm:text-lg text-slate-50 dark:text-zinc-900 text-sm '>
             {t('GetStarted')}
           </span>
         </button>
