@@ -18,14 +18,12 @@ export const Modal = ({ isVisible, onClose, children }: ModalProps) => {
     <div
       onClick={handleClose}
       id='wrapper'
-      className={`fixed z-50 inset-0 backdrop-blur-sm flex justify-center items-center transition-opacity ${
+      className={`fixed z-50 inset-0 backdrop-brightness-75 backdrop-blur-sm flex justify-center items-center transition-opacity ${
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
     >
       <div
-        className={`w-[400px] min-h-[420px] p-3 transition-opacity duration-300 rounded-[15px] bg-gray-200 dark:bg-zinc-800 flex flex-col ${
-          isVisible ? 'opacity-100' : 'opacity-0'
-        }`}
+        className={`w-[400px] min-h-[420px] p-3 bg-white/80 dark:bg-zinc-800/80 transition-opacity duration-300 rounded-[15px] flex flex-col`}
       >
         {children}
       </div>
