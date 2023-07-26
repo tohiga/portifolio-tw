@@ -9,11 +9,11 @@ import {
   IcTailwind,
   IcTs,
 } from '@/assets';
-import { SectionDescription } from '@/components/molecules';
+import { Modal, SectionDescription } from '@/components/molecules';
 import { StackCard } from '@/components/molecules/stackCard';
 import { useActive } from '@/stores/navSection';
 import { useIntersection } from '@/utils/intersection';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export const Stack = () => {
