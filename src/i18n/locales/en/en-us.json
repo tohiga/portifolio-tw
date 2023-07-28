@@ -32,6 +32,24 @@
     "Nodejs": "Node.js was crucial for developing robust and scalable APIs. Leveraging Node.js, I created highly performant and asynchronous servers, ensuring applications responded promptly to user requests. The ability to work with JavaScript both on the frontend and backend simplified communication and synchronization between different layers of the application.",
     "AWS": "AWS has been extensively used in various projects for hosting and managing cloud infrastructure. With AWS, I implemented the creation of EC2 instances to ensure high availability and scalability. Additionally, I utilized S3 to store resources, such as images, in an economical and reliable manner. Through Elastic Beanstalk, I automated the deployment and updating of applications based on metrics. Integration with CodeCommit allowed for efficient code repository management.",
     "Jest": "An integral part of my development practices, Jest was the primary choice for implementing unit tests in my projects. With Jest, I created automated tests that ensured code quality and application stability.",
-    "GraphQL": "The utilization of GraphQL with Apollo Client brought significant advantages to the applications. Through GraphQL, I consumed customized endpoints, obtaining only the required data for each component, avoiding unnecessary data fetching, and vastly improving performance. This approach proved especially relevant in projects with multiple data sources."
+    "GraphQL": "The utilization of GraphQL with Apollo Client brought significant advantages to the applications. Through GraphQL, I consumed customized endpoints, obtaining only the required data for each component, avoiding unnecessary data fetching, and vastly improving performance. This approach proved especially relevant in projects with multiple data sources.",
+    "OliRole": "Full-Stack Developer",
+    "OliFirstResponsabilities": "Webapp Development/ Management/ Deploy (React / Next / Typescript / GraphQL / AWS server)",
+    "OliSecondResponsabilities": "SDK Development/ Management/ Deploy (React / Websockets / AWS server)",
+    "OliDate": "Nov 2021 - May 2023",
+    "AiqRole": "FrontEnd Developer",
+    "AiqFirstResponsabilities": "Webapp Development/ Management (Vue.js/ React js)",
+    "AiqSecondResponsabilities": "Unit Testing (Jest)",
+    "AiqDate": "May 2021 - Nov 2023",
+    "MoodarRole": "Software Engineer",
+    "MoodarFirstResponsabilities": "App and Webapp Development/ Management/ Deploy (React js/React Native)",
+    "MoodarSecondResponsabilities": "Server Development/ Management/ Deploy (Python with Django web framework) and AWS Elastic Beanstalk",
+    "MoodarThirdResponsabilities": "Cloud Functions and Realtime DB (Firebase)",
+    "MoodarFourthResponsabilities": "e2e testing (Cypress/Detox)",
+    "MoodarDate": "Aug 2019 - May 2021",
+    "SeedRole": "Project Analyst",
+    "SeedFirstResponsabilities": "WebApp Development (React js/ Node)",
+    "SeedSecondResponsabilities": "Unit Testing (Jest)",
+    "SeedDate": "Jul 2019 - Jan 2020"
   }
 }

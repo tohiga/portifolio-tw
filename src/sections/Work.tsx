@@ -19,48 +19,48 @@ export const Work = () => {
   }, [inViewport, setActive, t]);
   const experiences: ExperienceProps[] = [
     {
-      role: 'Full-stack Developer',
+      role: t('OliRole'),
       company: 'Tm1 Brand Experience / Oli Video',
       responsibilities: [
-        'Webapp Development/ Management/ Deploy (React / Next / Typescript / GraphQL / AWS server)',
-        'SDK Development/ Management/ Deploy (React / AWS server)',
+        t('OliFirstResponsabilities'),
+        t('OliSecondResponsabilities'),
       ],
-      date: 'Nov 2021 - May 2023',
+      date: t('OliDate'),
       id: 0,
       logo: IcTm1,
     },
     {
-      role: 'FrontEnd Developer',
+      role: t('AiqRole'),
       company: 'Aiqfome',
-      date: 'May 2021 - Nov 2021',
+      date: t('AiqDate'),
       responsibilities: [
-        'Webapp Development/ Management (Vue.js/ React js)',
-        'Unit testing (Jest)',
+        t('AiqFirstResponsabilities'),
+        t('AiqSecondResponsabilities'),
       ],
       id: 1,
       logo: IcAiq,
     },
     {
-      role: 'Software Engineer',
+      role: t('MoodarRole'),
       company: 'Moodar',
-      date: 'Aug 2019 - May 2021',
+      date: t('MoodarDate'),
       responsibilities: [
-        ' App and Webapp Development/ Management/ Deploy (React js/React Native) ',
-        'Server Development/ Management/ Deploy (Python with Django web framework) and AWS Elastic Beanstalk',
-        'Cloud Functions and Realtime DB (Firebase)',
-        'e2e testing (Cypress/Detox)',
+        t('MoodarFirstResponsabilities'),
+        t('MoodarSecondResponsabilities'),
+        t('MoodarThirdResponsabilities'),
+        t('MoodarFourthResponsabilities'),
       ],
 
       id: 2,
       logo: IcMoodar,
     },
     {
-      role: 'Project Analyst',
+      role: t('SeedRole'),
       company: 'Seed a Bit',
-      date: 'Jul 2019 - Jan 2020',
+      date: t('SeedDate'),
       responsibilities: [
-        'App/Webapp development (React js/ React Native)',
-        'Server maintenance (Python with Django web framework)',
+        t('SeedFirstResponsabilities'),
+        t('SeedSecondResponsabilities'),
       ],
 
       id: 3,
