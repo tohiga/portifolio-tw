@@ -9,6 +9,7 @@ export { default as IcNextDark } from './nextdark.svg';
 export { default as IcNode } from './nodejs.svg';
 export { default as IcReact } from './react.svg';
 export { default as IcSeed } from './seedabit.png';
+export { default as IcMblabs } from './mblabs.png';
 export { default as IcSun } from './sun.svg';
 export { default as IcTailwind } from './tailwind.svg';
 export { default as IcTm1 } from './tm1.jpeg';

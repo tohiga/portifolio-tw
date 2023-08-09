@@ -50,6 +50,10 @@
     "SeedRole": "Analista de Projeto",
     "SeedFirstResponsabilities": "Desenvolvimento de WebApps (React js/ Node)",
     "SeedSecondResponsabilities": "Teste Unitário (Jest)",
-    "SeedDate": "Jul 2019 - Jan 2020"
+    "SeedDate": "Jul 2019 - Jan 2020",
+    "MbRole": "Desenvolvedor FrontEnd",
+    "MbFirstResponsabilities": "Desenvolvimento de WebApps (React js/ Next/ Typescript)",
+    "MbSecondResponsabilities": "Teste Unitário/ e2e (Jest/ Cypress)",
+    "MbDate": "Ago 2023 - Atual"
   }
 }

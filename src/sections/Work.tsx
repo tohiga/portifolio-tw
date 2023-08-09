@@ -1,4 +1,4 @@
-import { IcAiq, IcMoodar, IcSeed, IcTm1 } from '@/assets';
+import { IcAiq, IcMblabs, IcMoodar, IcSeed, IcTm1 } from '@/assets';
 import { ExperienceCard, SectionDescription } from '@/components/molecules';
 import { useActive } from '@/stores/navSection';
 import { ExperienceProps } from '@/types';
@@ -19,6 +19,17 @@ export const Work = () => {
   }, [inViewport, setActive, t]);
   const experiences: ExperienceProps[] = [
     {
+      role: t('MbRole'),
+      company: 'Mb Labs',
+      responsibilities: [
+        t('MbFirstResponsabilities'),
+        t('MbSecondResponsabilities'),
+      ],
+      date: t('MbDate'),
+      id: 0,
+      logo: IcMblabs,
+    },
+    {
       role: t('OliRole'),
       company: 'Tm1 Brand Experience / Oli Video',
       responsibilities: [
@@ -26,7 +37,7 @@ export const Work = () => {
         t('OliSecondResponsabilities'),
       ],
       date: t('OliDate'),
-      id: 0,
+      id: 1,
       logo: IcTm1,
     },
     {
@@ -37,7 +48,7 @@ export const Work = () => {
         t('AiqFirstResponsabilities'),
         t('AiqSecondResponsabilities'),
       ],
-      id: 1,
+      id: 2,
       logo: IcAiq,
     },
     {
@@ -51,7 +62,7 @@ export const Work = () => {
         t('MoodarFourthResponsabilities'),
       ],
 
-      id: 2,
+      id: 3,
       logo: IcMoodar,
     },
     {
@@ -63,7 +74,7 @@ export const Work = () => {
         t('SeedSecondResponsabilities'),
       ],
 
-      id: 3,
+      id: 4,
       logo: IcSeed,
     },
   ];
