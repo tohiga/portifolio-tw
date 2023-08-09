@@ -20,7 +20,7 @@ export const Work = () => {
   const experiences: ExperienceProps[] = [
     {
       role: t('MbRole'),
-      company: 'Mb Labs',
+      company: 'MB Labs',
       responsibilities: [
         t('MbFirstResponsabilities'),
         t('MbSecondResponsabilities'),
